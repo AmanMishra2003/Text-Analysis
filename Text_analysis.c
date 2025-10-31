@@ -2,7 +2,6 @@
 // Created by Aman Mishra
 // Putting avg letter frequency in french and english
 //
-
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
@@ -89,6 +88,17 @@ void print_language_characters(const char *language) {
 // Main Function
 // ---------------------------------------------------
 int main(void) {
+    FILE* fptr;
+
+    // Opening the file in read mode
+    fptr = fopen("filename.txt", "r");
+
+    // checking if the file is 
+    // opened successfully
+    if (fptr == NULL) {
+        printf("The file is not opened.");
+    }
+
     // Print English details
     print_avg_word_length("English");
     print_language_characters("English");
